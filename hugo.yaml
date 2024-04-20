@@ -1,4 +1,4 @@
-baseURL: baseURL: "https://Blog-TheShiproom.github.io/" #This value must begin with the protocol and end with a slash, as shown above.
+baseURL: "https://se1ecto.github.io/Blog-TheShiproom/" #This value must begin with the protocol and end with a slash, as shown above.
 languageCode: en-us
 title: My New Hugo Site
 theme: ["PaperMod"]
