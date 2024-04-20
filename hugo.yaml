@@ -1,4 +1,31 @@
 baseURL: "https://se1ecto.github.io/Blog-TheShiproom/" #This value must begin with the protocol and end with a slash, as shown above.
 languageCode: en-us
-title: My New Hugo Site
+title: The Shiproom
 theme: ["PaperMod"]
+
+params:
+  env: production
+  title: The Shiproom
+  description: "A software engineering blog tackling topics about DevOps and Site Reliability Engineering"
+  keywords: [Blog, Software Engineering, DevOps, SRE, Site Reliability Engineering]
+  author: ["Nail Moncef Boudjani", "Mehdi Labadi"]
+  #mages: ["<link or path of image for opengraph, twitter-cards>"]
+  DateFormat: "January 1st, 2024"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: false
+  ShowRssButtonInSectionTermList: false
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
