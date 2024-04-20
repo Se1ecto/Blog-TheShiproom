@@ -10,7 +10,7 @@ params:
   keywords: [Blog, Software Engineering, DevOps, SRE, Site Reliability Engineering]
   author: ["Nail Moncef Boudjani", "Mehdi Labadi"]
   #mages: ["<link or path of image for opengraph, twitter-cards>"]
-  DateFormat: "January 1st, 2024"
+  DateFormat: "January 1, 2006"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
 
@@ -29,3 +29,14 @@ params:
   hideSummary: false
   showtoc: false
   tocopen: false
+
+menu:
+  main:
+    - identifier: Posts
+      name: Posts
+      url: /
+      weight: 10
+    - identifier: about
+      name: About us
+      url: /about/
+      weight: 20
