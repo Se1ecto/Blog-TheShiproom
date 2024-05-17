@@ -13,7 +13,6 @@ params:
   DateFormat: "January 1, 2006"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
-
   ShowReadingTime: true
   ShowShareButtons: true
   ShowPostNavLinks: true
@@ -41,6 +40,9 @@ params:
   homeInfoParams:
     Title: Hi there wave
     Content: Can be Info, links, about...
+  
+  assets:
+    favicon: "images/favicon_b_on_w.svg"
 
 menu:
   main:

@@ -43,11 +43,11 @@
     <nav class="nav">
         <div class="logo">
             {{- $label_text := (site.Params.label.text | default site.Title) }}
-            <img id="siteLogo" src="/Blog-TheShiproom/images/docker-light.svg" alt="logo" aria-label="logo"
-                height="{{- site.Params.label.iconHeight | default "30" -}}">
+            <img id="siteLogo" src="{{ "images/logo_black.svg" | absURL }}" alt="logo" aria-label="logo"
+                height="{{- site.Params.label.iconHeight | default "55" -}}">
                 <script>
                     if (document.body.className.includes("dark")) {
-                        document.getElementById("siteLogo").src = "/Blog-TheShiproom/images/docker-dark.png";
+                        document.getElementById("siteLogo").src = "{{ "images/logo_white.svg" | absURL }}";
                     }
                 </script>
             </a>

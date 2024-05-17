@@ -84,11 +84,13 @@
         if (document.body.className.includes("dark")) {
             document.body.classList.remove('dark');
             localStorage.setItem("pref-theme", 'light');
-            document.getElementById("siteLogo").src = "/Blog-TheShiproom/images/docker-light.svg";
+            document.getElementById("siteLogo").src = "{{ "images/logo_black.svg" | absURL }}";
+            document.getElementById("siteLogoSplash").src = "{{ "images/logo_black.svg" | absURL }}";
         } else {
             document.body.classList.add('dark');
             localStorage.setItem("pref-theme", 'dark');
-            document.getElementById("siteLogo").src = "/Blog-TheShiproom/images/docker-dark.png";
+            document.getElementById("siteLogo").src = "/Blog-TheShiproom/images/logo_white.svg";
+            document.getElementById("siteLogoSplash").src = "/Blog-TheShiproom/images/logo_white.svg";
         }
     })
 
