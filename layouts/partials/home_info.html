@@ -1,0 +1,20 @@
+{{- with site.Params.homeInfoParams }}
+<article class="first-entry home-info">
+    <header class="entry-header">
+        <img id="siteLogoSplash" src="{{ "images/logo_black.svg" | absURL }}" alt="logo" aria-label="logo"
+        height="500">
+        <script>
+            if (document.body.className.includes("dark")) {
+                document.getElementById("siteLogoSplash").src = "{{ "images/logo_white.svg" | absURL }}";
+            }
+        </script>
+    </header>
+    <div class="entry-content">
+        {{ .Content | markdownify }}
+    </div>
+    <footer class="entry-footer">
+        {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
+    </footer>
+</article>
+{{- end -}}
+<link rel="stylesheet" href="{{ "css/main.css" | absURL }}">
