@@ -1,7 +1,9 @@
 baseURL: "https://se1ecto.github.io/Blog-TheShiproom/" #This value must begin with the protocol and end with a slash, as shown above.
 languageCode: en-us
 title: The Shiproom
-theme: ["PaperMod"]
+module:
+  imports:
+    - path: github.com/adityatelange/hugo-PaperMod
 
 params:
   env: production
