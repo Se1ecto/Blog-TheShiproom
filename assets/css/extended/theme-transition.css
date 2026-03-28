@@ -1,0 +1,115 @@
+/*
+  Theme change animation:
+  - Browsers often do NOT interpolate colors when only :root CSS variables change, so plain
+    transition: background-color on body is a no-op. View Transitions (see footer script)
+    crossfade the whole document for a reliable effect in supporting browsers.
+  - Extra transitions below still help where they apply (e.g. SVG strokes, borders).
+*/
+:root {
+    --tt: 0.3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --tt: 0s;
+    }
+}
+
+html {
+    transition: color-scheme var(--tt) ease;
+}
+
+/* Root crossfade when document.startViewTransition runs (ignored in older browsers). */
+::view-transition-group(root),
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: var(--tt);
+    animation-timing-function: ease;
+}
+
+body,
+body :is(
+    .main,
+    .header,
+    .footer,
+    .post-single,
+    .post-content,
+    .post-header,
+    .post-title,
+    .post-description,
+    .post-meta,
+    .first-entry,
+    .home-info,
+    .entry-header,
+    .entry-content,
+    .entry-footer,
+    .page-header,
+    article,
+    header,
+    footer,
+    main,
+    nav,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    li,
+    a,
+    span,
+    label,
+    pre,
+    code,
+    table,
+    tr,
+    td,
+    th,
+    hr,
+    blockquote,
+    input,
+    textarea,
+    button#theme-toggle,
+    .toc,
+    .toc a,
+    .highlight,
+    .pagination,
+    .pagination a,
+    .post-tags a,
+    .share-buttons,
+    .share-buttons a,
+    .breadcrumbs,
+    .breadcrumbs a,
+    #menu a,
+    .footer a,
+    .social-icons a,
+    .terms-tags li,
+    .profile,
+    .profile_inner,
+    .profile .buttons a
+) {
+    transition: background var(--tt) ease, background-color var(--tt) ease, color var(--tt) ease,
+        border-color var(--tt) ease, box-shadow var(--tt) ease, fill var(--tt) ease, stroke var(--tt) ease,
+        text-decoration-color var(--tt) ease;
+}
+
+article.post-entry {
+    transition: transform 0.1s ease, background var(--tt) ease, background-color var(--tt) ease,
+        border-color var(--tt) ease, box-shadow var(--tt) ease;
+}
+
+.top-link {
+    transition: visibility 0.5s, opacity 0.8s linear, background var(--tt) ease, background-color var(--tt) ease,
+        color var(--tt) ease, filter var(--tt) ease;
+}
+
+.terms-tags a,
+.button {
+    transition: transform 0.1s ease, background var(--tt) ease, background-color var(--tt) ease;
+}
+
+#searchResults li {
+    transition: transform 0.1s ease, border-color var(--tt) ease, background var(--tt) ease,
+        background-color var(--tt) ease;
+}
